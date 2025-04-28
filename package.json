@@ -1,0 +1,26 @@
+{
+  "name": "socialinf_asheville",
+  "version": "1.0.0",
+  "description": "Social Infr. of Asheville and sorrounding area (NC)",
+  "main": "map.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrosxam/SocialInf_Asheville.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrosxam/SocialInf_Asheville/issues"
+  },
+  "homepage": "https://github.com/mrosxam/SocialInf_Asheville#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.0"
+  }
+}
