@@ -15,24 +15,33 @@ body {
 }
 
 /* Add styles for the title */
-#map-title {
-    position: absolute;
+#left-panel {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
+    width: 500px;
+    height: 100vh;
     background: rgba(232, 218, 200, 0.7);
-    padding: 24px 24px 18px 24px;
-    box-shadow: 0 1px 4px rgba(252, 252, 252, 0.1);
-    font-family: 'Lato', sans-serif;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* left align text */
+    align-items: flex-start;
+    padding: 32px 24px 24px 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#map-title {
+    width: 100%;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 0;
 }
 
 #map-title h1 {
     margin: 0 0 10px 0;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #333;
     line-height: 1.2;
@@ -49,19 +58,22 @@ body {
 }
 
 #legend {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(242, 229, 210, 0.5);
-    padding: 10px;
-    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.2);
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
     font-family: 'Lato', sans-serif;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 #legend h2 {
     margin: 0 0 10px 0;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     text-align: left;
     padding-bottom: 5px;
 }
@@ -70,6 +82,7 @@ body {
     display: flex;
     align-items: center;
     margin: 5px 0;
+    font-weight: 100;
     font-size: 14px;
 }
 
@@ -96,6 +109,7 @@ body {
     margin: 5px 0;
     font-size: 14px;
 }
+
 
 
 #map-switch-modal {
@@ -153,4 +167,13 @@ body {
 }
 #switch-maps-btn:hover {
     background: rgba(214, 149, 52, 0.5);
+}
+
+#map, #maphubs {
+    position: fixed;
+    top: 0;
+    left: 500px;
+    width: calc(100vw - 500px);
+    height: 100vh;
+    z-index: 1;
 }
