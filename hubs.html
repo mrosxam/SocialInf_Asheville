@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Lato font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 01 ADD CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- 02 ADD MAPBOX -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+    <title>Asheville Hubs Map</title>
+</head>
+<body>
+    <!-- Add the title container -->
+    <div id="map-title">
+        <h1>Map of Already Identified Resilience Hubs in Asheville and Buncombe County (NC)</h1>
+        <h2>DISCLAIMER: This map uses a data source that it was send to the MIT Team of the subject Bills and Billions by Chris Joyell. We believe it was produced by Erica Sims.
+            It identifies the existing spaces that acted as resilience huibs during Helene. This is spaces of shelter, supply and shower in a moment of distress. This is just a partial assessment. More are to come. </h2>   
+    </div>
+    <!-- 04 ADD MAP CONTAINER -->
+    <div id="maphubs"></div>
+    <!-- Add the legend container with title -->
+    <div id="legend">
+        <h2>Legend</h2>
+    </div>
+    <div id="map-switch-modal">
+        <div class="modal-content">
+            <h2>Switch Maps</h2>
+            <p>Select the map you want to view:</p>
+            <button onclick="window.location.href='./index.html'">Go to Social Infrastructure Map</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+    <!-- 03 ADD JAVASCRIPT -->
+    <button onclick="openModal()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; font-size: 16px;font-family: 'Lato', sans-serif;">Switch Maps</button>
+    <script src="./maphub.js"></script>  
+    <script>
+        // JavaScript to handle modal open/close
+        function openModal() {
+            document.getElementById('map-switch-modal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('map-switch-modal').style.display = 'none';
+        }
+    </script> 
+</body>
+</html>

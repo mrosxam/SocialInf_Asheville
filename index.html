@@ -16,6 +16,7 @@
     <!-- Add the title container -->
     <div id="map-title">
         <h1>Map of Social Infrastructure of Asheville and Buncombe County (NC)</h1>
+        <h2>The "Social Infrastructure" of Asheville and Buncombe County (NC) refers to the network of spaces where people naturally gather, build relationships, and strengthen community bonds — a concept popularized by Eric Klinenberg. These "Places of the People" include libraries, schools, community centers, institutions, and other shared spaces that foster connection and belonging. For our purposes, these spaces are especially important because they could be strategically leveraged as resilience hubs — places that not only support daily social life but could also serve critical roles in community response and recovery efforts during crises. Mapping these assets helps us understand where opportunities exist to strengthen resilience and build a more connected, supportive community. In addition to these community spaces, we have also included key public institutions such as police stations and hospitals, as they can serve as resilience hubs by being accessible to the public during emergencies. However, we have not included parks (as they may not be open or operable during certain emergencies) or fire stations, since they are not typically open to the public, so can loose the daily activity that resiliency require. </h2>   
     </div>
     <!-- 04 ADD MAP CONTAINER -->
     <div id="map"></div>
@@ -23,7 +24,25 @@
     <div id="legend">
         <h2>Legend</h2>
     </div>
+    <div id="map-switch-modal">
+        <div class="modal-content">
+            <h2>Switch Maps</h2>
+            <p>Select the map you want to view:</p>
+            <button onclick="window.location.href='./hubs.html'">Go to Resilience Hub Map</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
     <!-- 03 ADD JAVASCRIPT -->
+    <button onclick="openModal()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; font-size: 16px; font: font-family; 'Lato', sans-serif;">Switch Maps</button>
     <script src="./map.js"></script>  
+    <script>
+        // JavaScript to handle modal open/close
+        function openModal() {
+            document.getElementById('map-switch-modal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('map-switch-modal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

@@ -2,8 +2,8 @@ mapboxgl.accessToken = "pk.eyJ1IjoibWlxdWVseGFtZW5hIiwiYSI6ImNtMWp0MTY2eDE0Y3Iya
 
 // CREATE A NEW OBJECT CALLED MAP
 const map = new mapboxgl.Map({
-container: "map", // container ID for the map object (this points to the HTML element)
-style: "mapbox://styles/miquelxamena/cm9rxg6jx00vv01s53zcd93q8", //YOUR STYLE URL
+container: "maphubs", // container ID for the map object (this points to the HTML element)
+style: "mapbox://styles/miquelxamena/cm9rocgju006b01qt3y1t3va4", //YOUR STYLE URL
 center: [-82.548205, 35.601878], // starting position [lng, lat] 
 zoom: 11.18,
 projection: "globe", // display the map as a 3D globe
@@ -27,14 +27,14 @@ map.on('load', () => {
     console.log('Available layers:', mapLayers.map(layer => layer.id));
 
     // Add click event specifically for your tileset layer
-    map.on('click', 'tilset', (e) => {
+    map.on('click', 'tilsethubs', (e) => {
         if (!e.features.length) return;
 
         // Get the coordinates from the clicked feature
         const coordinates = e.features[0].geometry.coordinates.slice();
         
         // Get just the name property
-        const name = e.features[0].properties.name;
+        const name = e.features[0].properties.description;
 
         // Create simple popup content with just the name
         const popupContent = `<div class="popup-content"><h3>${name}</h3></div>`;
@@ -52,26 +52,26 @@ map.on('load', () => {
     });
 
     // Change the cursor to a pointer when hovering over the tileset layer
-    map.on('mouseenter', 'tilset', () => {
+    map.on('mouseenter', 'tilsethubs', () => {
         map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to default when it leaves
-    map.on('mouseleave', 'tilset', () => {
+    map.on('mouseleave', 'tilsethubs', () => {
         map.getCanvas().style.cursor = '';
     });
 
     // Add the legend
     const legendItems = [
-        ['University or collage', '#90cefe'],
-        ['School', '#32fb8c'],
-        ['Townhall', '#9092fd'],
-        ['Shelter', '#feaeae'],
-        ['Community center or social facilities', '#f1fd1c'],
-        ['Hospital', '#ff3333'],
-        ['Library', '#fdd290'],
-        ['Police Station', '#2920d5'],
-        ['Others', '#000000']
+        ['Supply Centers', '#90cefe'],
+        ['Meals', '#feaeae'],
+        ['Interfaith Assistance Ministry', '#9092fd'],
+        ['Shelter', '#bbe7cb'],
+        ['Showers', '#1e4efa'],
+        ['Wifi', '#ff3333'],
+        ['Clothes', '#fdd290'],
+        ['Organizations', '#a7a5a5'],
+        ['Others (insulin, laundries, etc.)', '#000000']
     ];
 
     const legend = document.getElementById('legend');
