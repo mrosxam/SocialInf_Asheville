@@ -20,7 +20,7 @@ body {
     top: 20px;
     left: 20px;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(214, 149, 52, 0.5);
     padding: 15px 25px;
     border-radius: 4px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -46,9 +46,9 @@ body {
 
 #legend {
     position: absolute;
-    top: 20px;
+    bottom: 70px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(214, 149, 52, 0.5);
     padding: 10px;
     border-radius: 4px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -107,7 +107,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 #map-switch-modal .modal-content {
-    background-color: white;
+    background-color: rgba(214, 149, 52, 0.5);
     margin: 15% auto;
     padding: 20px;
     border-radius: 8px;
@@ -118,6 +118,7 @@ body {
 }
 #map-switch-modal .modal-content h2 {
     margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
 }
 #map-switch-modal .modal-content button {
     margin: 10px;
@@ -128,5 +129,25 @@ body {
     cursor: pointer;
 }
 #map-switch-modal .modal-content button:hover {
-    background-color: #ddd;
+    background-color: rgba(214, 149, 52, 0.5);
+}
+
+/* Style for the Switch Maps button */
+#switch-maps-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    z-index: 10; /* Ensure it stays above the map */
+    background: rgba(214, 149, 52, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    transition: background 0.2s;
+}
+#switch-maps-btn:hover {
+    background: rgba(214, 149, 52, 0.5);
 }
