@@ -1,4 +1,4 @@
-mapboxgl.accessToken = "pk.eyJ1IjoibWlxdWVseGFtZW5hIiwiYSI6ImNtMWp0MTY2eDE0Y3IyanB5eTRpbDI4cTMifQ.nYe7wrw3RqtGoSYDtG7_uA"; 
+mapboxgl.accessToken = ""; 
 
 // CREATE A NEW OBJECT CALLED MAP
 const map = new mapboxgl.Map({
